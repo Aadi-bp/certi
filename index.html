@@ -3,26 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Training Profile</title>
+<title>Student Portal | Training Institute</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #ffffff;
-    color: #222;
-}
-
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-.logo {
+    .logo {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -32,110 +16,222 @@ body {
     width: 100%;
     height: auto;
 }
-
-.info-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f4f6f9;
+    color:#333;
 }
 
-.card {
-    background: #f5f7fa;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s;
-    border: 1px solid #e0e0e0;
+/* Header */
+.header{
+    background:#002147;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+.header h2{
+    margin:0;
+    font-weight:500;
 }
 
-.card h3 {
-    margin-top: 0;
-    color: #0072ff;
+.header span{
+    font-size:14px;
+    opacity:0.8;
 }
 
-.status {
-    text-align: center;
-    margin-top: 40px;
+/* Main Container */
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.status h2 {
-    margin-bottom: 10px;
+/* Profile Section */
+.profile{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-bottom:40px;
 }
 
-button {
-    padding: 12px 30px;
-    border: none;
-    border-radius: 6px;
-    background: #0072ff;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+.profile-left{
+    flex:1;
+    min-width:250px;
 }
 
-button:hover {
-    background: #0056cc;
+.profile-right{
+    text-align:right;
 }
 
-.grade {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #28a745;
+.profile h3{
+    margin-top:0;
+    color:#002147;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.card{
+    background:#f9fafc;
+    padding:25px;
+    border-radius:8px;
+    border:1px solid #e3e6ea;
+}
+
+.card h4{
+    margin-top:0;
+    color:#0056b3;
+}
+
+/* Progress Bar */
+.progress-container{
+    margin-top:15px;
+}
+
+.progress-bar{
+    width:100%;
+    height:20px;
+    background:#e0e0e0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    width:90%;
+    background:#28a745;
+}
+
+/* Status Section */
+.status{
+    text-align:center;
+    margin-top:40px;
+}
+
+.status h3{
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 25px;
+    background:#0056b3;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#003f87;
+}
+
+.grade{
+    margin-top:15px;
+    font-weight:bold;
+    color:#28a745;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    color:#777;
 }
 
 /* Responsive */
 @media(max-width:768px){
-    .info-box{
-        grid-template-columns: 1fr;
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .profile-right{
+        text-align:left;
+        margin-top:15px;
     }
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-<div class="logo">
+<div class="header">
+    <div class="logo">
     <img src="https://github.com/Aadi-bp/img/blob/main/TOPS-logo.png?raw=true" alt="Institute Logo">
 </div>
+    <span>STU-2025-001</span>
+</div>
 
-<div class="info-box">
+<div class="container">
 
-    <div class="card">
-        <h3>Personal Information</h3>
-        <p><strong>Name:</strong> Tejas Vishvanath Birhade</p>
+<div class="profile">
+    <div class="profile-left">
+        <h3>Tejas Vishvanath Birhade</h3>
         <p><strong>Course:</strong> Backend Development</p>
         <p><strong>Institute:</strong> TOPS TECHNOLOGIES</p>
         <p><strong>Duration:</strong> 17 Months</p>
     </div>
 
+    <div class="profile-right">
+        <p><strong>Status:</strong> Completed</p>
+        <p><strong>Completion Date:</strong> 15 October 2025</p>
+    </div>
+</div>
+
+<div class="cards">
+
     <div class="card">
-        <h3>Course Details</h3>
-        <p>HTML, CSS, JavaScript, Python</p>
-        <p>PHP & MySQL</p>
-        <p>API Integration</p>
-        <p>Project Development</p>
+        <h4>Course Modules</h4>
+        <p>✔ HTML, CSS, JavaScript, Python</p>
+        <p>✔ PHP & MySQL</p>
+        <p>✔ API Integration</p>
+        <p>✔ Live Project Development</p>
+        
+    </div>
+
+    <div class="card">
+        <h4>Performance Overview</h4>
+        <p>Attendance: 95%</p>
+        <p>Project Score: 92%</p>
+
+        <div class="progress-container">
+            <label>Overall Performance</label>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
     </div>
 
 </div>
 
 <div class="status">
-    <h2>Course Status</h2>
-    <p id="completion">Status: Completed</p>
-    <button onclick="showGrade()">View Grade</button>
+    <h3>Final Grade</h3>
+    <button onclick="showGrade()">View Result</button>
     <div class="grade" id="grade"></div>
+    <br><br>
+    
+    
+</div>
+
+<div class="footer">
+    © 2026 TOPS TECHNOLOGIES | Official Student Record Portal
 </div>
 
 </div>
 
 <script>
-function showGrade() {
-    document.getElementById("grade").innerHTML = "Final Grade: A+ (Excellent Performance)";
+function showGrade(){
+    document.getElementById("grade").innerHTML="Grade: A+ (Excellent Performance)";
 }
 </script>
 
