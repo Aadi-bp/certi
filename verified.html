@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Training Profile</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: #f5f7fa;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0072ff;
+}
+
+.status {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.status h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background: #0072ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056cc;
+}
+
+.grade {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #28a745;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .info-box{
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+    <img src="https://github.com/Aadi-bp/img/blob/main/TOPS-logo.png?raw=true" alt="Institute Logo">
+</div>
+
+<div class="info-box">
+
+    <div class="card">
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> Tejas Vishvanath Birhade</p>
+        <p><strong>Course:</strong> Backend Development</p>
+        <p><strong>Institute:</strong> TOPS TECHNOLOGIES</p>
+        <p><strong>Duration:</strong> 6 Months</p>
+    </div>
+
+    <div class="card">
+        <h3>Course Details</h3>
+        <p>HTML, CSS, JavaScript, Python</p>
+        <p>PHP & MySQL</p>
+        <p>API Integration</p>
+        <p>Project Development</p>
+    </div>
+
+</div>
+
+<div class="status">
+    <h2>Course Status</h2>
+    <p id="completion">Status: Completed</p>
+    <button onclick="showGrade()">View Grade</button>
+    <div class="grade" id="grade"></div>
+</div>
+
+</div>
+
+<script>
+function showGrade() {
+    document.getElementById("grade").innerHTML = "Final Grade: A+ (Excellent Performance)";
+}
+</script>
+
+</body>
+</html>
